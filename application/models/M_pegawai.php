@@ -8,9 +8,9 @@ class M_pegawai extends CI_Model{
     return $tampil;
   }
 
-  function hapus_data($kode_user){
-    $this->db->where($kode_user);
-    $this->db->delete('tb_user');
+  function hapus_data($kode_pegawai){
+    $this->db->where($kode_pegawai);
+    $this->db->delete('tb_pegawai');
   }
 
   function cari_data($kode_pegawai){
@@ -20,8 +20,8 @@ class M_pegawai extends CI_Model{
   }
 
   function edit_data($data_pegawai, $kode_pegawai){
-    $this->db->where($kode_user);
-    $this->db->update('tb_user',$data_user);
+    $this->db->where($kode_pegawai);
+    $this->db->update('tb_pegawai',$data_pegawai);
   }
 
   function tambah_data($data_pegawai){

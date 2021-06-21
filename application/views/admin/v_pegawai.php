@@ -37,7 +37,7 @@
               <td><center><?= $row->nip; ?></td>
               <td><center><?= $row->nama_pegawai; ?></td>
               <td><center>
-                <a href="<?php echo site_url('c_pegawai/hapus/'.$row->id_pegawai); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data ini ?')">Hapus</a>
+                <a href="<?php echo site_url('c_pegawai/hapus/'.$row->id_pegawai); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->nama_pegawai ?> ?')">Hapus</a>
                 <a href="<?php echo site_url('c_pegawai/edit/'.$row->id_pegawai); ?>" class="btn btn-sm btn-info">Edit</a>
                 <a href="<?php echo site_url('c_pegawai/lihat/'.$row->id_pegawai); ?>" class="btn btn-sm btn-success">Lihat</a>
               </td>
