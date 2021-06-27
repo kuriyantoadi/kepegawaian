@@ -1,6 +1,6 @@
 <?php
 
-class M_login extends CI_Model{
+class M_login_op extends CI_Model{
 
   //tampil buku
   function auth_login($username, $password){

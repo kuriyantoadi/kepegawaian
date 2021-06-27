@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_page extends CI_Controller {
+class C_operator extends CI_Controller {
 
   public function __construct()
   {
@@ -18,7 +18,7 @@ class C_page extends CI_Controller {
 
 	public function index()
 	{
-    $this->load->view('template/header');
+    $this->load->view('template/header-op');
     $this->load->view('dashboard');
     $this->load->view('template/footer');
 	}
@@ -26,7 +26,7 @@ class C_page extends CI_Controller {
 
   	public function operator()
   	{
-      $this->load->view('template/header');
+      $this->load->view('template/header-op');
       $this->load->view('operator/index');
       $this->load->view('template/footer');
   	}

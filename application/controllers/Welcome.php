@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 		// $this->load->view('template/header');
 		// $this->load->view('dashboard');
 		// $this->load->view('template/footer');
-		$this->load->view('v_login');
+		$this->load->view('v_login_pns');
 
 	}
 }

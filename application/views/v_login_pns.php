@@ -28,7 +28,7 @@
             <div class="text-center mt-4">
               <h1 class="h2">Selamat Datang</h1>
               <p class="lead">
-                Silahkan Anda Login
+                Silahkan Anda Login Sebagai Pegawai Negeri Sipil
               </p>
             </div>
 
@@ -36,7 +36,7 @@
               <div class="card-body">
                 <div class="m-sm-4">
 
-                  <?= form_open('c_login/auth'); ?>
+                  <?= form_open('Login_pns/auth'); ?>
                     <div class="mb-3">
                       <label class="form-label">Username</label>
                       <input class="form-control form-control-lg" name="username" placeholder="Masukan Username Anda" />
@@ -44,14 +44,15 @@
                     <div class="mb-3">
                       <label class="form-label">Password</label>
                       <input class="form-control form-control-lg" type="password" name="password" placeholder="Masukan Password Anda" />
-                      <small>
-                        <a href="pages-reset-password.html">Forgot password?</a>
-                      </small>
+
                     </div>
 
                     <div class="text-center mt-3">
-                      <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                      <button style="margin-bottom:  50px" type="submit" class="btn btn-lg btn-primary">Login</button>
                     </div>
+                    <small>
+                      <a  href="Login_operator">Login Sebagai Operator atau Kasubag UMPEG</a>
+                    </small>
                     <?= form_close(); ?>
                 </div>
               </div>
