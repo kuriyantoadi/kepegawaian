@@ -18,7 +18,7 @@ $ses_id = $this->session->userdata('ses_id');
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="<?= base_url() ?>assets/img/icons/icon-48x48.png" />
 
-	<title>Login PNS</title>
+	<title>Halaman PNS</title>
 
 	<!-- datapicker -->
 	<!-- <link href="<?= base_url() ?>assets/datepicker/css/bootstrap.min.css" rel="stylesheet"> -->

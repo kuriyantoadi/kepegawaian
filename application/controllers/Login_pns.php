@@ -41,7 +41,7 @@ class Login_pns extends CI_Controller {
 				redirect('c_pns');
 				echo "error 2";
 			}else {
-				$url = base_url();
+				$url = base_url('Login_pns');
 				echo $this->session->set_flashdata('msg', 'Username atau password salah');
 				redirect($url);
 				echo "error 3";
@@ -54,7 +54,7 @@ class Login_pns extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		$url = base_url();
+		$url = base_url('Login_pns');
 		redirect($url);
 	}
 

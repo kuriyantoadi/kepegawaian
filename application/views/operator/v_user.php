@@ -37,8 +37,8 @@
               <td><center><?= $row->username; ?></td>
               <td><center><?= $row->status; ?></td>
               <td><center>
-                <a href="<?php echo site_url('c_user/hapus/'.$row->id_user); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data ini ?')">Hapus</a>
-                <a href="<?php echo site_url('c_user/edit/'.$row->id_user); ?>" class="btn btn-sm btn-info">Edit</a></td>
+                <a href="<?= site_url('c_user/hapus/'.$row->id_user); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data ini ?')">Hapus</a>
+                <a href="<?= site_url('c_user/edit/'.$row->id_user); ?>" class="btn btn-sm btn-info">Edit</a></td>
               </td>
             </tr>
             <?php } ?>

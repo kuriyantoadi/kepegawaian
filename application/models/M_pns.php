@@ -14,7 +14,7 @@ class M_pns extends CI_Model{
   }
 
   function cari_data($ses_id){
-    $this->db->where($ses_id);
+    $this->db->where('id_pegawai', $ses_id);
     $hasil = $this->db->get('tb_pns')->result();
     return $hasil;
   }
