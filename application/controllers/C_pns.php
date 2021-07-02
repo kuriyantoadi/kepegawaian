@@ -96,7 +96,7 @@ class C_pns extends CI_Controller {
 		);
 
 		$this->M_pns->edit_data($data_pns, $kode_pns);
-		// redirect('C_pns');
+		redirect('C_pns');
 	}
 
 }
