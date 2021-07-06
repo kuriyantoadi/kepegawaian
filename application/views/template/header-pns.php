@@ -55,7 +55,7 @@ $ses_id = $this->session->userdata('ses_id');
 						</a>
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>c_pegawai">
+						<a class="sidebar-link" href="<?= base_url() ?>C_file">
 							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Data Berkas PNS</span>
 						</a>
 					</li>
