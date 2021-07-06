@@ -44,7 +44,7 @@ $ses_id = $this->session->userdata('ses_id');
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="index.html">
+						<a class="sidebar-link" href="<?= base_url() ?>C_pns">
 							<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
 						</a>
 					</li>

@@ -7,44 +7,46 @@
         <div class="card flex-fill w-100">
 
           <div class="card-body px-4">
-            <center><h3 style="margin-top: 30px; margin-bottom: 20px">Tambah Berkas Pegawai Negeri Sipil</h3></center>
+            <center>
+              <h3 style="margin-top: 30px; margin-bottom: 20px">Tambah Berkas Pegawai Negeri Sipil</h3>
+            </center>
+
+            <?= form_open_multipart('C_file/upload_berkas'); ?>
 
             <?php
               $no=1;
               foreach ($kode_pns as $row) {
             ?>
 
-              <div class="mb-3">
-                <label class="form-label"><b>Nama Pegawai</label>
-                  <input type="text" class="form-control" name="nama_pegawai" value="<?= $row->nama_pegawai ?>" readonly>
-              </div>
-              <div class="mb-3">
-                <label class="form-label"><b>Tempat Lahir</label>
-                  <input type="text" class="form-control" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" readonly>
-              </div>
-              <div class="mb-3">
-                <label class="form-label"><b>Tanggal Lahir</label>
-                  <input type="text" class="form-control datepicker" name="tgl_lahir" value="<?= $row->tgl_lahir ?>"  readonly>
-              </div>
-              <div class="mb-3">
+            <div class="mb-3">
+              <label class="form-label"><b>Nama Pegawai</label>
+              <input type="hidden" name="id_pegawai" value="<?= $ses_id ?>">
+              <input type="text" class="form-control" name="nama_pegawai" value="<?= $row->nama_pegawai ?>" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label"><b>Tempat Lahir</label>
+              <input type="text" class="form-control" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label"><b>Tanggal Lahir</label>
+              <input type="text" class="form-control datepicker" name="tgl_lahir" value="<?= $row->tgl_lahir ?>" readonly>
+            </div>
+            <div class="mb-3">
 
-                <label class="form-label"><b>Keterangan (Belum selesaikan)</label>
-                <select class="form-control" name="">
-                  <option value=""></option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label"><b>File Upload</label>
-                  <input type="file" class="form-control" name="nama_file">
-              </div>
+              <label class="form-label"><b>Keterangan</label>
+              <input type="text" class="form-control" name="keterangan" value="" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label"><b>File Upload</label>
+              <input type="file" class="form-control" name="nama_file" required>
+            </div>
 
+            <center><input style="margin-top: 20px" class="btn btn-success" type="submit" name="" value="submit">
 
-              <center><input style="margin-top: 20px" class="btn btn-success" type="submit" name="" value="submit">
-
-          <?php } ?>
+              <?php } ?>
 
 
-            <?= form_close(); ?>
+              <?= form_close(); ?>
           </div>
         </div>
       </div>
