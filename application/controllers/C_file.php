@@ -19,8 +19,7 @@ class C_file extends CI_Controller {
   public function index()
   {
     $ses_id = $this->session->userdata('ses_id');
-    $data['kode_pns'] = $this->M_pns->cari_data($ses_id);
-    $data['tampil_file'] = $this->M_file->cari_file()->result();
+    $data['tampil_file'] = $this->M_file->cari_file($ses_id)->result();
 
     $this->load->view('template/header-pns');
     $this->load->view('pns/berkas', $data);

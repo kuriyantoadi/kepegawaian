@@ -107,7 +107,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label"><b>Mulai Tanggal</b></label>
-                <input type="text" class="form-control" name="mulai_tgl" value="" required>
+                <input type="date" class="form-control" name="mulai_tgl" value="" required>
                 <div class="form-text">Format Bulan/Tanggal/Tahun</div>
               </div>
 

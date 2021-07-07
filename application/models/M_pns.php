@@ -16,12 +16,13 @@ class M_pns extends CI_Model{
     return $hasil;
   }
 
-  function cari_file_pns(){
-     $this->db->select('*');
-     $this->db->from('tb_file');
-     $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
-     $query = $this->db->get();
-     return $query;
+  function cari_file_pns($id_pegawai){
+    $this->db->select('*');
+    $this->db->from('tb_file');
+    $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+    $this->db->where('tb_file.id_pegawai',$id_pegawai);
+    $query = $this->db->get()->result();
+    return $query;
   }
 
   function hapus_pns($id_pegawai){

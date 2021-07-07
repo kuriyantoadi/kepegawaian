@@ -53,10 +53,8 @@ class C_operator extends CI_Controller {
 
     public function berkas_pns($id_pegawai)
     {
-      $kode_pegawai = array('id_pegawai' => $id_pegawai);
-
-      $data['kode_pns'] = $this->M_pns->cari_data_pns($kode_pegawai);
-      $data['tampil_file'] = $this->M_pns->cari_file_pns()->result();
+      // $kode_pegawai = array('id_pegawai' => $id_pegawai);
+      $data['tampil_file'] = $this->M_pns->cari_file_pns($id_pegawai);
 
       $this->load->view('template/header-op');
       $this->load->view('operator/v_pns_berkas', $data);
@@ -91,6 +89,7 @@ class C_operator extends CI_Controller {
     {
       $username = $this->input->post('username');
       $password = $this->input->post('password');
+      $status = 'pns';
       $nama_pegawai = $this->input->post('nama_pegawai');
       $tempat_lahir = $this->input->post('tempat_lahir');
       $tgl_lahir = $this->input->post('tgl_lahir');
@@ -135,7 +134,8 @@ class C_operator extends CI_Controller {
         'mulai_tgl' => $mulai_tgl,
 
         'username'=>$username,
-        'password'=>md5($password)
+        'password'=>md5($password),
+        'status'=>$status
       );
 
       $this->M_pns->tambah_pns_up($tambah_pns);
@@ -204,7 +204,7 @@ class C_operator extends CI_Controller {
       );
 
       $this->M_pns->edit_data($data_pegawai, $kode_pegawai);
-      redirect('C_oprator/tampil_pns');
+      redirect('C_operator/tampil_pns');
     }
 
 //fungsi akhir pns
