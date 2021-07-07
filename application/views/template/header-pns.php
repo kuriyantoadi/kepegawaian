@@ -21,9 +21,7 @@ $ses_id = $this->session->userdata('ses_id');
 	<title>Halaman PNS</title>
 
 	<!-- datapicker -->
-	<!-- <link href="<?= base_url() ?>assets/datepicker/css/bootstrap.min.css" rel="stylesheet"> -->
 	<link href="<?= base_url() ?>assets/datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-
 
 	<link href="<?= base_url() ?>assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">

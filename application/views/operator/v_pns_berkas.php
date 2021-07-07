@@ -14,8 +14,7 @@
               foreach ($kode_pns as $row) {
             ?>
 
-
-              <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>/C_file/tambah_berkas" class="btn btn-success">Tambah Berkas</a>
+              <!-- <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>/C_file/tambah_berkas" class="btn btn-success">Tambah Berkas</a> -->
 
             <table class="table table-bordered" id="example">
               <thead>
@@ -34,7 +33,7 @@
                 <td><?= $row->nama_pegawai ?></td>
                 <td><center><?= $row->keterangan ?></td>
                 <td><center>
-                  <a href="#" class="btn btn-primary">Download</a>
+                  <a href="<?= base_url() ?>file_upload/<?= $row->nama_file ?>" class="btn btn-primary">Download</a>
                   <a href="<?= site_url('C_file/hapus/'.$row->id_file); ?>" class='btn btn-danger' onclick="return confirm('Hapus data PDF <?= $row->keterangan ?> ?')">Hapus</a>
                 </td>
               </tr>

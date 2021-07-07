@@ -10,7 +10,7 @@
             <center><h3>Edit Pegawai</h3></center>
             <?php
               foreach ($kode_pegawai as $row) {
-              echo form_open('C_pegawai/edit_up');
+              echo form_open('C_operator/pns_edit_up');
             ?>
               <div class="mb-3">
                 <label class="form-label"><b>Username Pegawai</label>
@@ -108,7 +108,6 @@
                 <label class="form-label"><b>Mulai Tanggal</label>
                 <input type="text" class="form-control datepicker" name="mulai_tgl" value="<?= $row->mulai_tgl ?>" required>
               </div>
-
 
               <div class="mb-3"><center>
                 <input type="submit" class="btn btn-success btn-md" name="" value="simpan">

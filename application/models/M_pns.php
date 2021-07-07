@@ -2,6 +2,41 @@
 
 class M_pns extends CI_Model{
 
+//operator awal
+
+  function cari_data_pns($kode_pegawai){
+    $this->db->where($kode_pegawai);
+    $hasil = $this->db->get('tb_pns')->result();
+    return $hasil;
+  }
+
+  function lihat_pns($kode_pegawai){
+    $this->db->where($kode_pegawai);
+    $hasil = $this->db->get('tb_pns')->result();
+    return $hasil;
+  }
+
+  function cari_file_pns(){
+     $this->db->select('*');
+     $this->db->from('tb_file');
+     $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+     $query = $this->db->get();
+     return $query;
+  }
+
+  function hapus_pns($id_pegawai){
+    $this->db->where($id_pegawai);
+    $this->db->delete('tb_pns');
+  }
+
+  function tambah_pns_up($tambah_pns){
+    $this->db->insert('tb_pns',$tambah_pns);
+  }
+
+
+  //operator akhir
+
+
   //tampil buku
   function tampil_data(){
     $tampil = $this->db->get('tb_pns')->result();

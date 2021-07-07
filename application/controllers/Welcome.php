@@ -12,4 +12,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('v_login_pns');
 
 	}
+
+	public function test()
+	{
+		$this->load->view('template/test');
+	}
 }
