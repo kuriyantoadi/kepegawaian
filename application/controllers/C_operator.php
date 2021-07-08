@@ -8,6 +8,7 @@ class C_operator extends CI_Controller {
       parent::__construct();
       $this->load->model('M_user');
       $this->load->model('M_pns');
+      $this->load->model('M_pengumuman');
 
       // session login
       if ($this->session->userdata('admin') != true) {
@@ -16,13 +17,44 @@ class C_operator extends CI_Controller {
       }
   }
 
-	public function index()
+  public function index()
 	{
     $this->load->view('template/header-op');
     $this->load->view('dashboard');
     $this->load->view('template/footer');
 	}
 
+// pengumuman
+public function pengumuman()
+{
+  $data['kode_pengumuman'] = $this->M_pengumuman->tampil_pengumuman();
+
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_pengumuman', $data);
+  $this->load->view('template/footer');
+}
+
+public function pengumuman_tambah()
+{
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_pengumuman_tambah');
+  $this->load->view('template/footer');
+}
+
+public function pengumuman_tambah_up()
+{
+  $username = $this->input->post('username');
+
+
+  $tambah_pengumuman = array(
+    'isi_pengumuman' => $isi_pengumuman,
+    'tgl_upload' => $tgl_upload,
+    'penulis' => $penulis,
+    'kondisi' => $kondisi,
+  );
+
+  $this->M_pns->tambah_pns_up($tambah_pns);
+  redirect('C_operator/tampil_pns');}
 
 	public function operator()
 	{

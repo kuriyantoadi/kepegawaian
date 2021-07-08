@@ -35,26 +35,15 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_page">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator">
 							<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
 						</a>
 					</li>
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/pengumuman">
+							<i class="align-middle" data-feather="alert-circle"></i> <span class="align-middle">Pengumuman</span>
+						</a>
+					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_skumptk">
-							<i class="align-middle" data-feather="user"></i> <span class="align-middle">SKUMPK</span>
-						</a>
-					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_pegawai">
-							<i class="align-middle" data-feather="users"></i> <span class="align-middle">KGB</span>
-						</a>
-					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_pegawai">
-							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Kenaikan Pangkat</span>
-						</a>
-					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_operator/tampil_pns">
 							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Data PNS</span>

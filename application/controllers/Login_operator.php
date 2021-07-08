@@ -33,8 +33,8 @@ class Login_operator extends CI_Controller {
 
       }elseif ($data['status']=='operator') {
 				$this->session->set_userdata('akses', 'operator');
-				$this->session->set_userdata('ses_id', $data['id']);
-				$this->session->set_userdata('ses_nama', $data['nama']);
+				$this->session->set_userdata('ses_id', $data['id_user']);
+				$this->session->set_userdata('ses_nama', $data['username']);
 				redirect('C_operator/operator');
 			}else {
 				$url = base_url('Login_operator');

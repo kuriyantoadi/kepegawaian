@@ -20,8 +20,6 @@ class Login_pns extends CI_Controller {
     $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
 
     $cek_login = $this->M_login_pns->auth_login($username, $password);
-		// $cek_login = $this->M_login_op->auth_login($username, $password);
-
 
     if ($cek_login->num_rows() > 0) {
       $data = $cek_login->row_array();
@@ -42,8 +40,8 @@ class Login_pns extends CI_Controller {
 				echo "error 2";
 			}else {
 				$url = base_url('Login_pns');
-				echo $this->session->set_flashdata('msg', 'Username atau password salah');
-				redirect($url);
+				$this->session->set_flashdata('msg', 'Username atau password salah');
+				// redirect($url);
 				echo "error 3";
 
 			}
