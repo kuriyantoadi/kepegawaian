@@ -8,6 +8,10 @@ class M_pengumuman extends CI_Model{
     return $tampil;
   }
 
+  function tambah_pengumuman($tambah_pengumuman){
+    $this->db->insert('tb_pengumuman',$tambah_pengumuman);
+  }
+
   function hapus_data($kode_pegawai){
     $this->db->where($kode_pegawai);
     $this->db->delete('tb_pegawai');
@@ -24,9 +28,7 @@ class M_pengumuman extends CI_Model{
     $this->db->update('tb_pegawai',$data_pegawai);
   }
 
-  function tambah_data($data_pegawai){
-    $this->db->insert('tb_pegawai',$data_pegawai);
-  }
+
 
 }
 

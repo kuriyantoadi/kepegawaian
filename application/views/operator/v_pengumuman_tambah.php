@@ -8,14 +8,14 @@
 
           <div class="card-body px-4">
             <center><h3>Tambah Pegawai</h3></center>
-              <?= form_open('C_operator/pengumuman_tambah_up'); ?>
+              <?= form_open('C_operator/pengumuman_tambah_up');  ?>
               <div class="mb-3">
                 <label class="form-label"><b>Penulis Pengumuman</b></label>
                   <input type="text" class="form-control" name="penulis" value="" required>
               </div>
               <div class="mb-3">
-                <label class="form-label"><b>Isi</b></label>
-                <textarea class="form-control" rows="2" required></textarea>
+                <label class="form-label"><b>Isi Pengumuman</b></label>
+                <textarea class="form-control" name="isi_pengumuman" rows="2" required></textarea>
               </div>
               <div class="mb-3">
                 <label class="form-label"><b>Kondisi</b></label>

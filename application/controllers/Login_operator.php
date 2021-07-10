@@ -23,18 +23,18 @@ class Login_operator extends CI_Controller {
 
     if ($cek_login->num_rows() > 0) {
       $data = $cek_login->row_array();
-      // $this->session->set_userdata('masuk', true);
 
-      if ($data['status']=='admin') {
-				$this->session->set_userdata('admin', true);
-				// $this->session->set_userdata('ses_id', $data['id']);
-				// $this->session->set_userdata('ses_nama', $data['nama']);
+      if ($data['status']=='operator') {
+				$this->session->set_userdata('operator', true);
+				$this->session->set_userdata('ses_id', $data['id']);
+				$this->session->set_userdata('ses_username', $data['username']);
 				redirect('C_operator');
 
-      }elseif ($data['status']=='operator') {
-				$this->session->set_userdata('akses', 'operator');
-				$this->session->set_userdata('ses_id', $data['id_user']);
-				$this->session->set_userdata('ses_nama', $data['username']);
+      // }elseif ($data['status']=='operator') {
+			// 	$this->session->set_userdata('akses', 'operator');
+			// 	$this->session->set_userdata('ses_id', $data['id_user']);
+			// 	$cek_user = $this->session->set_userdata('ses_username', $data['username']);
+
 				redirect('C_operator/operator');
 			}else {
 				$url = base_url('Login_operator');

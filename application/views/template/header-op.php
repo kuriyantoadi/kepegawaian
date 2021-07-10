@@ -1,3 +1,10 @@
+<?php
+$ses_nama = $this->session->userdata('ses_username');
+$ses_id = $this->session->userdata('ses_id');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +56,16 @@
 							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Data PNS</span>
 						</a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/profil_user">
+							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Profil User</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>Login_operator/logout">
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
+						</a>
+					</li>
 
 
 			</div>
@@ -64,18 +81,12 @@
 					<ul class="navbar-nav navbar-align">
 
 						<li class="nav-item dropdown">
-							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
-								<i class="align-middle" data-feather="settings"></i>
+
+							<a class="nav-link d-none d-sm-inline-block" href="#" data-toggle="dropdown">
+								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
+								<span class="text-dark"><?= $ses_nama ?></span>
 							</a>
 
-							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a>
-								<a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1" data-feather="settings"></i> Ganti Password</a>
-								<a class="dropdown-item" href="Login_operator/logout">Log out</a>
-							</div>
 						</li>
 					</ul>
 				</div>

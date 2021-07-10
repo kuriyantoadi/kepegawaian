@@ -11,7 +11,7 @@ class C_operator extends CI_Controller {
       $this->load->model('M_pengumuman');
 
       // session login
-      if ($this->session->userdata('admin') != true) {
+      if ($this->session->userdata('operator') != true) {
         $url = base_url('c_login');
         redirect($url);
       }
@@ -43,8 +43,10 @@ public function pengumuman_tambah()
 
 public function pengumuman_tambah_up()
 {
-  $username = $this->input->post('username');
-
+  $penulis = $this->input->post('penulis');
+  $isi_pengumuman = $this->input->post('isi_pengumuman');
+  $kondisi = $this->input->post('kondisi');
+  $tgl_upload = date('d-m-Y  H:i' );
 
   $tambah_pengumuman = array(
     'isi_pengumuman' => $isi_pengumuman,
@@ -53,11 +55,12 @@ public function pengumuman_tambah_up()
     'kondisi' => $kondisi,
   );
 
-  $this->M_pns->tambah_pns_up($tambah_pns);
-  redirect('C_operator/tampil_pns');}
+  $this->M_pengumuman->tambah_pengumuman($tambah_pengumuman);
+  redirect('C_operator/pengumuman');}
 
 	public function operator()
 	{
+
     $this->load->view('template/header-op');
     $this->load->view('operator/index');
     $this->load->view('template/footer');
