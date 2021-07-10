@@ -41,8 +41,8 @@
               <td><center><?= $row->isi_pengumuman; ?></td>
               <td><center><?= $row->kondisi; ?></td>
               <td><center>
-                <a href="<?php echo site_url('c_operator/hapus_pns/'.$row->id_pengumuman); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->isi_pengumuman ?> ?')">Hapus</a>
-                <a href="<?php echo site_url('c_operator/pns_edit/'.$row->id_pengumuman); ?>" class="btn btn-sm btn-info">Edit</a>
+                <a href="<?php echo site_url('c_operator/hapus_pengumuman/'.$row->id_pengumuman); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->isi_pengumuman ?> ?')">Hapus</a>
+                <a href="<?php echo site_url('c_operator/edit_pengumuman/'.$row->id_pengumuman); ?>" class="btn btn-sm btn-info">Edit</a>
 
               </td>
             </tr>

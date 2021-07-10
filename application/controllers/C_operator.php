@@ -56,7 +56,47 @@ public function pengumuman_tambah_up()
   );
 
   $this->M_pengumuman->tambah_pengumuman($tambah_pengumuman);
-  redirect('C_operator/pengumuman');}
+  redirect('C_operator/pengumuman');
+}
+
+public function hapus_pengumuman($id_pengumuman)
+{
+  $id_pengumuman = array('id_pengumuman' => $id_pengumuman);
+  $this->M_pengumuman->hapus_pengumuman($id_pengumuman);
+  redirect('C_operator/pengumuman');
+}
+
+public function edit_pengumuman($id_pengumuman)
+{
+    $kode_pengumuman = array('id_pengumuman' => $id_pengumuman);
+    $data['kode_pengumuman'] = $this->M_pengumuman->cari_data_pengumuman($kode_pengumuman);
+
+    $this->load->view('template/header-op');
+    $this->load->view('operator/v_pengumuman_edit',$data);
+    $this->load->view('template/footer');
+}
+
+public function pengumuman_edit_up()
+{
+  $id_pengumuman = $this->input->post('id_pengumuman');
+  $isi_pengumuman = $this->input->post('isi_pengumuman');
+  $penulis = $this->input->post('penulis');
+  $kondisi = $this->input->post('kondisi');
+
+  $kode_pengumuman = array('id_pengumuman' => $id_pengumuman);
+
+  $data_pengumuman = array(
+    'isi_pengumuman' => $isi_pengumuman,
+    'penulis' => $penulis,
+    'kondisi' => $kondisi
+  );
+
+  $this->M_pengumuman->edit_data($data_pengumuman, $kode_pengumuman);
+  redirect('C_operator/pengumuman');
+
+}
+
+// pns
 
 	public function operator()
 	{

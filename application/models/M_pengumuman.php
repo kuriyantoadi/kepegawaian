@@ -12,20 +12,20 @@ class M_pengumuman extends CI_Model{
     $this->db->insert('tb_pengumuman',$tambah_pengumuman);
   }
 
-  function hapus_data($kode_pegawai){
-    $this->db->where($kode_pegawai);
-    $this->db->delete('tb_pegawai');
+  function hapus_pengumuman($id_pengumuman){
+    $this->db->where($id_pengumuman);
+    $this->db->delete('tb_pengumuman');
   }
 
-  function cari_data($kode_pegawai){
-    $this->db->where($kode_pegawai);
-    $hasil = $this->db->get('tb_pegawai')->result();
+  function cari_data_pengumuman($kode_pengumuman){
+    $this->db->where($kode_pengumuman);
+    $hasil = $this->db->get('tb_pengumuman')->result();
     return $hasil;
   }
 
-  function edit_data($data_pegawai, $kode_pegawai){
-    $this->db->where($kode_pegawai);
-    $this->db->update('tb_pegawai',$data_pegawai);
+  function edit_data($data_pengumuman, $kode_pengumuman){
+    $this->db->where($kode_pengumuman);
+    $this->db->update('tb_pengumuman',$data_pengumuman);
   }
 
 

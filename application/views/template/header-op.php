@@ -79,12 +79,10 @@ $ses_id = $this->session->userdata('ses_id');
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
-
 						<li class="nav-item dropdown">
-
 							<a class="nav-link d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
 								<span class="text-dark"><?= $ses_nama ?></span>
+								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
 							</a>
 
 						</li>
