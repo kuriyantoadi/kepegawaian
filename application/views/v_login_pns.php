@@ -37,7 +37,12 @@
                 <div class="m-sm-4">
 
                   <?= form_open('Login_pns/auth'); ?>
-                  <?= $this->session->flashdata('msg'); ?>
+                  <div class="alert alert-danger" role="alert">
+                    <center>
+                      <?= $this->session->flashdata('msg'); ?>
+                    </center>
+                  </div>
+
                     <div class="mb-3">
                       <label class="form-label">Username</label>
                       <input class="form-control form-control-lg" name="username" placeholder="Masukan Username Anda" />

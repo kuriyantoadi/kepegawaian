@@ -43,6 +43,10 @@ class Login_operator extends CI_Controller {
 			}
 
     }
+
+		$this->session->set_flashdata('msg', 'Username atau password salah');
+		$url = base_url('Login_operator');
+		redirect($url);
   }
 
 	public function logout()

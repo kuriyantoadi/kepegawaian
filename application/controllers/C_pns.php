@@ -17,8 +17,10 @@ class C_pns extends CI_Controller {
 
 	public function index()
 	{
+		$data['pengumuman'] = $this->M_pns->pengumuman();
+
 		$this->load->view('template/header-pns');
-		$this->load->view('pns/index.php');
+		$this->load->view('pns/index.php', $data);
 		$this->load->view('template/footer');
 
 	}

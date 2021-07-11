@@ -8,4 +8,8 @@ bagian admin
 - error datepicker
 
 9 juli 2021
-- crud pengumnan
+- crud pengumnan -> ok
+
+11 juli 2021
+- tampil pengumuman di user pns
+- ganti password belum bisa

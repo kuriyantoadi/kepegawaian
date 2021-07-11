@@ -9,6 +9,7 @@ class C_operator extends CI_Controller {
       $this->load->model('M_user');
       $this->load->model('M_pns');
       $this->load->model('M_pengumuman');
+      $this->load->model('M_profil');
 
       // session login
       if ($this->session->userdata('operator') != true) {
@@ -95,6 +96,54 @@ public function pengumuman_edit_up()
   redirect('C_operator/pengumuman');
 
 }
+
+// profil user
+public function profil_user()
+{
+  $ses_username = $this->session->userdata('ses_username');
+  $data['kode_user'] = $this->M_profil->cari_data($ses_username);
+
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_profil_user',$data);
+  $this->load->view('template/footer');
+}
+
+
+public function profil_password()
+{
+  $ses_username = $this->session->userdata('ses_username');
+  $data['kode_user'] = $this->M_profil->cari_data($ses_username);
+
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_profil_pass',$data);
+  $this->load->view('template/footer');
+}
+
+public function profil_pass_up()
+{
+  $id_user = $this->input->post('id_user');
+  $password = $this->input->post('password');
+  $password_konfirimasi = $this->input->post('password_konfirmasi');
+
+  if ($password == $password_konfirimasi) {
+    $pass_enk = md5($password);
+    // echo $pass_enk;
+
+    $data_pass = array(
+      'password' => $pass_enk
+    );
+
+    echo $id_user;
+
+    $this->M_profil->ganti_pass($data_pass, $id_user);
+    $this->session->set_flashdata('pass_up', 'Password berhasil update');
+    redirect('C_operator/profil_user');
+
+  }
+
+
+}
+
 
 // pns
 

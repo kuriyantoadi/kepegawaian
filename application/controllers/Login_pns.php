@@ -30,23 +30,25 @@ class Login_pns extends CI_Controller {
 				// $this->session->set_userdata('ses_id', $data['id']);
 				// $this->session->set_userdata('ses_nama', $data['nama']);
 				redirect('c_pns');
-				echo "error 1";
+				// echo "error 1";
 
       }elseif ($data['status']=='pns') {
 				$this->session->set_userdata('pns', true);
 				$this->session->set_userdata('ses_id', $data['id_pegawai']);
 				$this->session->set_userdata('ses_nama', $data['nama_pegawai']);
 				redirect('c_pns');
-				echo "error 2";
+				// echo "error 2";
 			}else {
-				$url = base_url('Login_pns');
 				$this->session->set_flashdata('msg', 'Username atau password salah');
-				// redirect($url);
-				echo "error 3";
-
+				$url = base_url('Login_pns');
+				redirect($url);
 			}
 
     }
+		$this->session->set_flashdata('msg', 'Username atau password salah');
+		$url = base_url('Login_pns');
+		redirect($url);
+
   }
 
 	public function logout()

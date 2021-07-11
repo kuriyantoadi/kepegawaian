@@ -9,7 +9,7 @@ class C_user extends CI_Controller {
 			$this->load->model('M_user');
 
 			// session login
-			if ($this->session->userdata('admin') != true) {
+			if ($this->session->userdata('operator') != true) {
 				$url = base_url('c_login');
 				redirect($url);
 			}
@@ -19,8 +19,8 @@ class C_user extends CI_Controller {
 	{
 		$data['user'] = $this->M_user->tampil_data();
 
-		$this->load->view('template/header');
-		$this->load->view('admin/v_user', $data);
+		$this->load->view('template/header-op');
+		$this->load->view('operator/v_user', $data);
 		$this->load->view('template/footer');
 	}
 
@@ -28,7 +28,7 @@ class C_user extends CI_Controller {
 	{
 	    $kode_user = array('id_user' => $id_user);
 			$data['kode_user'] = $this->M_user->cari_data($kode_user);
-			$this->load->view('template/header');
+			$this->load->view('template/header-op');
 			$this->load->view('admin/v_user_edit', $data);
 			$this->load->view('template/footer');
 	}
@@ -60,8 +60,8 @@ class C_user extends CI_Controller {
 
 	public function tambah()
 	{
-		$this->load->view('template/header');
-		$this->load->view('admin/v_user_tambah');
+		$this->load->view('template/header-op');
+		$this->load->view('operator/v_user_tambah');
 		$this->load->view('template/footer');
 	}
 

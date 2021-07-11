@@ -57,6 +57,11 @@ $ses_id = $this->session->userdata('ses_id');
 							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Data Berkas PNS</span>
 						</a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>Login_pns/logout">
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
+						</a>
+					</li>
 
 
 
@@ -77,16 +82,11 @@ $ses_id = $this->session->userdata('ses_id');
 								<i class="align-middle" data-feather="settings"></i>
 							</a>
 
-							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
+							<a class="nav-link d-none d-sm-inline-block" href="#" data-toggle="dropdown">
 								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
 								<!-- <span class="text-dark">Charles Hall</span> -->
 								<span class="text-dark"><?= $ses_nama ?></span>
 							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a>
-								<a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1" data-feather="settings"></i> Ganti Password</a>
-								<a class="dropdown-item" href="<?= base_url() ?>Login_pns/logout">Log out</a>
-							</div>
 						</li>
 					</ul>
 				</div>

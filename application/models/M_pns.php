@@ -64,6 +64,13 @@ class M_pns extends CI_Model{
     $this->db->insert('tb_pns',$data_pns);
   }
 
+  public function pengumuman()
+  {
+    $this->db->where('kondisi','buka');
+    $tampil = $this->db->get('tb_pengumuman')->result();
+    return $tampil;
+  }
+
 }
 
  ?>
