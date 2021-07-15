@@ -10,7 +10,7 @@ class C_file extends CI_Controller {
       $this->load->model('M_pns');
 
       // session login
-      if ($this->session->userdata('pns') != true) {
+      if (($this->session->userdata('operator') != true) && ($this->session->userdata('pns') != true))  {
         $url = base_url('c_login');
         redirect($url);
       }
@@ -87,6 +87,27 @@ class C_file extends CI_Controller {
       }
       redirect('C_file');
   }
+
+  public function lihat_berkas($id_file)
+  {
+      $kode_file = array('id_file' => $id_file);
+      $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+      $this->load->view('template/header-pns');
+      $this->load->view('pns/berkas_lihat', $data);
+      $this->load->view('template/footer');
+  }
+
+  public function op_lihat_berkas($id_file)
+  {
+      $kode_file = array('id_file' => $id_file);
+      $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+      $this->load->view('template/header-op');
+      $this->load->view('operator/v_pns_berkas_lihat', $data);
+      $this->load->view('template/footer');
+  }
+
 
 
 

@@ -59,7 +59,7 @@ $ses_id = $this->session->userdata('ses_id');
 					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_operator/profil_user">
-							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Profil User</span>
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil User</span>
 						</a>
 					</li>
 					<li class="sidebar-item">

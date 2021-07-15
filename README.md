@@ -11,5 +11,9 @@ bagian admin
 - crud pengumnan -> ok
 
 11 juli 2021
-- tampil pengumuman di user pns
-- ganti password belum bisa
+- tampil pengumuman di user pns -> ok
+- ganti password belum bisa -> ok
+
+16 juli 2021
+- login kasubag
+- tampilan kasubag, laporan data pegawai, data berkas upload

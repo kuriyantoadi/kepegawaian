@@ -9,14 +9,22 @@ class M_file extends CI_Model{
     return $hasil;
   }
 
-     function cari_file($ses_id){
-        $this->db->select('*');
-        $this->db->from('tb_file');
-        $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
-        $this->db->where('tb_file.id_pegawai',$ses_id);
-        $query = $this->db->get();
-        return $query;
-     }
+ function cari_file($ses_id){
+    $this->db->select('*');
+    $this->db->from('tb_file');
+    $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+    $this->db->where('tb_file.id_pegawai',$ses_id);
+    $query = $this->db->get();
+    return $query;
+ }
+
+ function cari_file_view($kode_file){
+   $this->db->where($kode_file);
+   $hasil = $this->db->get('tb_file')->result();
+   return $hasil;
+ }
+
+
 }
 
  ?>

@@ -30,12 +30,12 @@ class Login_operator extends CI_Controller {
 				$this->session->set_userdata('ses_username', $data['username']);
 				redirect('C_operator');
 
-      // }elseif ($data['status']=='operator') {
-			// 	$this->session->set_userdata('akses', 'operator');
-			// 	$this->session->set_userdata('ses_id', $data['id_user']);
-			// 	$cek_user = $this->session->set_userdata('ses_username', $data['username']);
+      }elseif ($data['status']=='kasubag') {
+				$this->session->set_userdata('kasubag', true);
+				$this->session->set_userdata('ses_id', $data['id']);
+				$this->session->set_userdata('ses_username', $data['username']);
 
-				redirect('C_operator/operator');
+				redirect('C_kasubag');
 			}else {
 				$url = base_url('Login_operator');
 				echo $this->session->set_flashdata('msg', 'Username atau password salah');
