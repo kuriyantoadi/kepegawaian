@@ -156,7 +156,7 @@ public function profil_pass_up()
 	}
 
 //fungsi awal pns
-  public function tampil_pns()
+    public function tampil_pns()
   	{
   		$data['kode_pegawai'] = $this->M_pns->tampil_data();
 
