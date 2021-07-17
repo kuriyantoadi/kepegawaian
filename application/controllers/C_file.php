@@ -33,6 +33,8 @@ class C_file extends CI_Controller {
     $data['ses_id'] = $ses_id;
     $data['kode_pns'] = $this->M_pns->cari_data($ses_id);
 
+    $data['tampil_permintaan'] = $this->M_file->tampil_permintaan();
+
 
     $this->load->view('template/header-pns');
     $this->load->view('pns/berkas_tambah', $data);

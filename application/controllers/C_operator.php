@@ -10,6 +10,7 @@ class C_operator extends CI_Controller {
       $this->load->model('M_pns');
       $this->load->model('M_pengumuman');
       $this->load->model('M_profil');
+      $this->load->model('M_file');
 
       // session login
       if ($this->session->userdata('operator') != true) {
@@ -24,6 +25,68 @@ class C_operator extends CI_Controller {
     $this->load->view('dashboard');
     $this->load->view('template/footer');
 	}
+
+// permintaan file
+public function permintaan_file()
+{
+  $data['kode_permintaan'] = $this->M_file->tampil_permintaan();
+
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_permintaan_file', $data);
+  $this->load->view('template/footer');
+}
+
+
+public function permintaan_file_tambah()
+{
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_permintaan_file_tambah');
+  $this->load->view('template/footer');
+}
+
+public function permintaan_file_tambah_up()
+{
+  $nama_keterangan = $this->input->post('nama_keterangan');
+
+  $kode_tambah = array(
+    'nama_keterangan' => $nama_keterangan
+  );
+
+  $this->M_file->tambah_permintaan($kode_tambah);
+  redirect('C_operator/permintaan_file');
+}
+
+public function permintaan_file_hapus($id_keterangan)
+{
+  $id_keterangan = array('id_keterangan' => $id_keterangan);
+  $this->M_file->hapus_permintaan($id_keterangan);
+  redirect('C_operator/permintaan_file');
+}
+
+public function permintaan_file_edit($id_keterangan)
+{
+  $kode_permintaan= array('id_keterangan' => $id_keterangan);
+  $data['kode_permintaan'] = $this->M_file->cari_data_permitaan($kode_permintaan);
+
+  $this->load->view('template/header-op');
+  $this->load->view('operator/v_permintaan_file_edit', $data);
+  $this->load->view('template/footer');
+}
+
+public function permintaan_file_edit_up()
+{
+  $id_keterangan = $this->input->post('id_keterangan');
+  $nama_keterangan = $this->input->post('nama_keterangan');
+  $kode_keterangan = array('id_keterangan' => $id_keterangan);
+
+  $data_permintaan = array(
+    'id_keterangan' => $id_keterangan,
+    'nama_keterangan' => $nama_keterangan
+  );
+
+  $this->M_file->edit_permintaan($data_permintaan, $kode_keterangan);
+  redirect('C_operator/permintaan_file');
+}
 
 // pengumuman
 public function pengumuman()

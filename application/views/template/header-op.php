@@ -53,6 +53,11 @@ $ses_id = $this->session->userdata('ses_id');
 					</li>
 
 					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/permintaan_file">
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Permintaan File</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_operator/tampil_pns">
 							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Data PNS</span>
 						</a>

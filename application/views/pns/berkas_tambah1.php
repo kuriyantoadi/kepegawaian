@@ -33,12 +33,10 @@
             </div>
             <div class="mb-3">
               <label class="form-label"><b>Keterangan</label>
-              <select class="form-control" name="keterangan" required>
-                <option value="">Pilih</option>
-                <?php foreach ($tampil_permintaan as $row_2) { ?>
-                 <option value="<?= $row_2->nama_keterangan ?>"><?= $row_2->nama_keterangan ?></option>
-                <?php } ?>
+              <select class="fom-control" name=keterangan"">
+
               </select>
+              <input type="text" class="form-control" name="keterangan" value="" required>
             </div>
             <div class="mb-3">
               <label class="form-label"><b>File Upload</label>
