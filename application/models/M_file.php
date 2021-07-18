@@ -13,15 +13,20 @@ class M_file extends CI_Model{
     $this->db->select('*');
     $this->db->from('tb_file');
     $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+    $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
     $this->db->where('tb_file.id_pegawai',$ses_id);
     $query = $this->db->get();
     return $query;
  }
 
+//relasi tb_permintaan_file + tb_
    function cari_file_view($kode_file){
+     $this->db->select('*');
+     $this->db->from('tb_file');
+     $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
      $this->db->where($kode_file);
-     $hasil = $this->db->get('tb_file')->result();
-     return $hasil;
+     $query = $this->db->get()->result();
+     return $query;
    }
 
 

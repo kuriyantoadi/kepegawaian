@@ -33,10 +33,10 @@
             </div>
             <div class="mb-3">
               <label class="form-label"><b>Keterangan</label>
-              <select class="form-control" name="keterangan" required>
+              <select class="form-control" name="id_keterangan" required>
                 <option value="">Pilih</option>
                 <?php foreach ($tampil_permintaan as $row_2) { ?>
-                 <option value="<?= $row_2->nama_keterangan ?>"><?= $row_2->nama_keterangan ?></option>
+                 <option value="<?= $row_2->id_keterangan ?>"><?= $row_2->nama_keterangan ?></option>
                 <?php } ?>
               </select>
             </div>

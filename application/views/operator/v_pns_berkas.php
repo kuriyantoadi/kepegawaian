@@ -9,7 +9,7 @@
           <div class="card-body px-4">
             <center><h3 style="margin-top: 30px; margin-bottom: 20px">Berkas Pegawai Negeri Sipil</h3></center>
 
-            <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>/C_file/tambah_berkas" class="btn btn-success">Tambah Berkas</a>
+            <!-- <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>/C_file/tambah_berkas" class="btn btn-success">Tambah Berkas</a> -->
 
             <table class="table table-bordered" id="example">
               <thead>
@@ -29,11 +29,11 @@
                 <td><center><?= $no++ ?></td>
                 <td><center><?= $row->tgl_upload ?></td>
                 <td><?= $row->nama_pegawai ?></td>
-                <td><center><?= $row->keterangan ?></td>
+                <td><center><?= $row->nama_keterangan ?></td>
                 <td><center>
                   <a href="<?= base_url('file_upload/'.$row->nama_file); ?>" class="btn btn-primary">Download</a>
                   <a href="<?= site_url('C_file/op_lihat_berkas/'.$row->id_file); ?>" class='btn btn-info'>View</a>
-                  <a href="<?= site_url('C_file/hapus/'.$row->id_file); ?>" class='btn btn-danger' onclick="return confirm('Hapus data PDF <?= $row->keterangan ?> ?')">Hapus</a>
+                  <a href="<?= site_url('C_file/hapus/'.$row->id_file); ?>" class='btn btn-danger' onclick="return confirm('Hapus data PDF <?= $row->nama_keterangan ?> ?')">Hapus</a>
                 </td>
               </tr>
             <?php }  ?>

@@ -18,7 +18,7 @@
             <table class="table table-bordered">
               <tr>
                 <td>Keterangan File</td>
-                <td><?= $row->keterangan ?></td>
+                <td><?= $row->nama_keterangan ?></td>
               </tr>
               <tr>
                 <td>Tampil File</td>

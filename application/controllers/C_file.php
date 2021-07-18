@@ -63,7 +63,7 @@ class C_file extends CI_Controller {
 
         $data = array(
           'tgl_upload'=>$tgl_upload,
-          'keterangan'=>$this->input->post('keterangan'),
+          'id_keterangan'=>$this->input->post('id_keterangan'),
           'id_pegawai'=>$this->input->post('id_pegawai'),
           'nama_file'=> $_data['upload_data']['file_name']
         );
