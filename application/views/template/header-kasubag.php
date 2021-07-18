@@ -63,6 +63,11 @@ $ses_id = $this->session->userdata('ses_id');
 						</a>
 					</li>
 					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/belum_upload">
+							<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Belum Upload Berkas</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_operator/profil_user">
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil User</span>
 						</a>

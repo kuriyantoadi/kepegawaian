@@ -28,6 +28,18 @@ class C_kasubag extends CI_Controller {
 
 	}
 
+  public function kondisi_berkas($id_pegawai)
+  {
+    // $id_pegawai = array('id_pegawai' => $id_pegawai);
+    $data['tampil_pns'] = $this->M_kasubag->tampil_pns_berkas($id_pegawai);
+    $data['belum_upload'] = $this->M_kasubag->tampil_kondisi_berkas($id_pegawai)->result();
+
+    $this->load->view('template/header-kasubag');
+		$this->load->view('kasubag/v_kondisi_berkas', $data);
+		$this->load->view('template/footer');
+  }
+
+
   public function lap_berkas()
 	{
     $data['tampil_berkas'] = $this->M_kasubag->lap_berkas();

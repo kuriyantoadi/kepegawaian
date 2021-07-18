@@ -38,6 +38,17 @@ class M_kasubag extends CI_Model{
   }
 
 
+  function tampil_kondisi_berkas($id_pegawai){
+    $query = $this->db->query("SELECT * FROM tb_permintaan_file WHERE NOT EXISTS (SELECT id_keterangan FROM tb_file where id_pegawai=$id_pegawai and tb_file.id_keterangan=tb_permintaan_file.id_keterangan)");
+    return $query;
+  }
+
+  function tampil_pns_berkas($id_pegawai){
+    $this->db->where('id_pegawai',$id_pegawai);
+    $hasil = $this->db->get('tb_pns')->result();
+    return $hasil;
+  }
+
 }
 
  ?>

@@ -38,6 +38,7 @@
               <td><center>
                 <a href="<?php echo site_url('C_kasubag/berkas_pns/'.$row->id_pegawai); ?>" class="btn btn-sm btn-primary">Berkas</a>
                 <a href="<?php echo site_url('C_kasubag/profil_pns/'.$row->id_pegawai); ?>" class="btn btn-sm btn-success">Profil</a>
+                <a href="<?php echo site_url('C_kasubag/kondisi_berkas/'.$row->id_pegawai); ?>" class="btn btn-sm btn-info">Kondisi Berkas</a>
               </td>
             </tr>
             <?php } ?>
