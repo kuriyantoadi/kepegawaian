@@ -34,7 +34,7 @@
             <tr>
               <td><center><?= $no++ ?></td>
               <td><center><?= $row->nama_pegawai; ?></td>
-              <td><center><?= $row->keterangan; ?></td>
+              <td><center><?= $row->nama_keterangan; ?></td>
               <td><center><?= $row->tgl_upload; ?></td>
             </tr>
             <?php } ?>

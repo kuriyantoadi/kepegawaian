@@ -32,7 +32,7 @@ class M_kasubag extends CI_Model{
      $this->db->select('*');
      $this->db->from('tb_file');
      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
-     // $this->db->where('tb_file.id_pegawai',$ses_id);
+     $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
      $query = $this->db->get()->result();
      return $query;
   }
