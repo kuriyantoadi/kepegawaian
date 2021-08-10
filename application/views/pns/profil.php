@@ -23,7 +23,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label"><b>Tanggal Lahir</label>
-                  <input type="text" class="form-control datepicker" name="tgl_lahir" value="<?= $row->tgl_lahir ?>" readonly>
+                  <input type="text" class="form-control" name="tgl_lahir" value="<?= $row->tgl_lahir ?>" readonly>
               </div>
               <div class="mb-3">
                 <label class="form-label"><b>Jenis Kelamin</label>
@@ -98,7 +98,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label"><b>Mulai Tanggal</label>
-                <input type="text" class="form-control datepicker" name="mulai_tgl" value="<?= $row->mulai_tgl ?>" readonly>
+                <input type="text" class="form-control" name="mulai_tgl" value="<?= $row->mulai_tgl ?>" readonly>
               </div>
 
 

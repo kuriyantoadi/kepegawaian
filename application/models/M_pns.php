@@ -72,6 +72,7 @@ class M_pns extends CI_Model{
     return $tampil;
   }
 
+  
 }
 
  ?>

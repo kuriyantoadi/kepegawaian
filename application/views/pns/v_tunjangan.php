@@ -7,9 +7,8 @@
         <div class="card flex-fill w-100">
 
           <div class="card-body px-4">
-            <center><h3 style="margin-bottom: 20px">Berkas Pegawai Negeri Sipil</h3></center>
-
-              <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>C_file/tambah_berkas" class="btn btn-success">Tambah Berkas</a>
+            <center><h3 style="margin-bottom: 40px;">Berkas Tunjangan Pegawai Negeri Sipil</h3></center>
+            <a style="margin-top: 30px; margin-bottom: 20px" href="<?= base_url() ?>C_file/tunjangan_tambah" class="btn btn-success">Tambah Berkas</a>
 
             <table class="table table-bordered" id="example">
               <thead>
@@ -23,7 +22,7 @@
               </thead>
             <?php
             $no=1;
-             foreach ($tampil_file as $row) {
+             foreach ($tampil as $row) {
              ?>
               <tr>
                 <td><center><?= $no++ ?></td>
@@ -33,12 +32,11 @@
                 <td><center>
                   <a href="<?= base_url('file_upload/'.$row->nama_file); ?>" class="btn btn-primary">Download</a>
                   <a href="<?= site_url('C_file/lihat_berkas/'.$row->id_file); ?>" class='btn btn-info'>View</a>
-                  <a href="<?= site_url('C_file/hapus/'.$row->id_file); ?>" class='btn btn-danger' onclick="return confirm('Hapus data PDF <?= $row->nama_keterangan ?> ?')">Hapus</a>
+                  <a href="<?= site_url('C_file/tunjangan_hapus/'.$row->id_file); ?>" class='btn btn-danger' onclick="return confirm('Hapus data PDF <?= $row->nama_keterangan ?> ?')">Hapus</a>
                 </td>
               </tr>
             <?php }  ?>
             </table>
-
 
             <?= form_close(); ?>
           </div>

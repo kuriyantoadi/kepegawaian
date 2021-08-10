@@ -1,7 +1,6 @@
 <?php
 $ses_nama = $this->session->userdata('ses_nama');
 $ses_id = $this->session->userdata('ses_id');
-
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +56,22 @@ $ses_id = $this->session->userdata('ses_id');
 							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Data Berkas PNS</span>
 						</a>
 					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_file/naik_pangkat">
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Naik Pangkat</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_file/naik_gaji">
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Naik Gaji</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_file/tunjangan">
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Tunjangan</span>
+						</a>
+					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>Login_pns/logout">
 							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
@@ -84,7 +99,6 @@ $ses_id = $this->session->userdata('ses_id');
 
 							<a class="nav-link d-none d-sm-inline-block" href="#" data-toggle="dropdown">
 								<img src="<?= base_url() ?>assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
-								<!-- <span class="text-dark">Charles Hall</span> -->
 								<span class="text-dark"><?= $ses_nama ?></span>
 							</a>
 						</li>

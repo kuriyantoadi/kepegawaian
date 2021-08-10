@@ -19,5 +19,5 @@ bagian admin
 - tampilan kasubag, laporan data pegawai, data berkas upload -> ok
 
 18 juli 2021
-- kurang tampil data file yang belum di Upload
+- kurang tampil data file yang belum di Upload ->o ok
 SELECT * FROM tb_permintaan_file WHERE NOT EXISTS (SELECT id_keterangan FROM tb_file where id_pegawai=1 and tb_file.id_keterangan=tb_permintaan_file.id_keterangan)

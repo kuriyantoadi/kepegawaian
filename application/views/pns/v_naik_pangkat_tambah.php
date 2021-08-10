@@ -8,10 +8,10 @@
 
           <div class="card-body px-4">
             <center>
-              <h3 style="margin-top: 30px; margin-bottom: 20px">Tambah Berkas Pegawai Negeri Sipil</h3>
+              <h3 style="margin-top: 30px; margin-bottom: 20px">Tambah Berkas Naik Gaji Pegawai Negeri Sipil</h3>
             </center>
 
-            <?= form_open_multipart('C_file/upload_berkas'); ?>
+            <?= form_open_multipart('C_file/naik_pangkat_tambah_up'); ?>
 
             <?php
               $no=1;

@@ -14,11 +14,19 @@
               <div class="mb-3">
                 <label class="form-label"><b>Nama Keterangan File</label>
                   <input type="hidden" class="form-control" name="id_keterangan" value="<?= $row->id_keterangan ?>" required>
-                  <input type="text" class="form-control" name="nama_keterangan" value="<?= $row->nama_keterangan ?>" required>
+                 <input type="text" class="form-control" name="nama_keterangan" value="<?= $row->nama_keterangan ?>" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><b>Kondisi</label>
+                <select class="form-control" name="kondisi">
+                  <option value="<?= $row->kondisi ?>">Pilih ( <?= $row->kondisi ?>) </option>
+                  <option value="aktif">aktif</option>
+                  <option value="tidak aktif">tidak aktif</option>
+                </select>
               </div>
 
               <div class="mb-3"><center>
-                <input type="submit" class="btn btn-success btn-sm" name="" value="simpan">
+                <input type="submit" class="btn btn-success" name="" value="simpan">
               </div>
               <?php echo form_close();
             } ?>

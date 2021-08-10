@@ -29,7 +29,7 @@ class C_operator extends CI_Controller {
 // permintaan file
 public function permintaan_file()
 {
-  $data['kode_permintaan'] = $this->M_file->tampil_permintaan();
+  $data['kode_permintaan'] = $this->M_file->tampil_permintaan_op();
 
   $this->load->view('template/header-op');
   $this->load->view('operator/v_permintaan_file', $data);
@@ -46,10 +46,12 @@ public function permintaan_file_tambah()
 
 public function permintaan_file_tambah_up()
 {
-  $nama_keterangan = $this->input->post('nama_keterangan');
+  $nama_keterangan  = $this->input->post('nama_keterangan');
+  $kondisi = $this->input->post('kondisi');
 
   $kode_tambah = array(
-    'nama_keterangan' => $nama_keterangan
+    'nama_keterangan' => $nama_keterangan,
+    'kondisi' => $kondisi
   );
 
   $this->M_file->tambah_permintaan($kode_tambah);
@@ -77,11 +79,13 @@ public function permintaan_file_edit_up()
 {
   $id_keterangan = $this->input->post('id_keterangan');
   $nama_keterangan = $this->input->post('nama_keterangan');
+  $kondisi = $this->input->post('kondisi');
   $kode_keterangan = array('id_keterangan' => $id_keterangan);
 
   $data_permintaan = array(
     'id_keterangan' => $id_keterangan,
-    'nama_keterangan' => $nama_keterangan
+    'nama_keterangan' => $nama_keterangan,
+    'kondisi' => $kondisi
   );
 
   $this->M_file->edit_permintaan($data_permintaan, $kode_keterangan);
@@ -203,7 +207,6 @@ public function profil_pass_up()
     redirect('C_operator/profil_user');
 
   }
-
 
 }
 

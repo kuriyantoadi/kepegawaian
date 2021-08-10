@@ -13,6 +13,16 @@
                 <label class="form-label"><b>Keterangan Permintaan File</b></label>
                   <input type="text" class="form-control" name="nama_keterangan" value="" required>
               </div>
+              <div class="mb-3">
+                <label class="form-label"><b>Kondisi</label>
+                <select class="form-control" name="kondisi"  required>
+                  <option value="">Pilihan </option>
+                  <option value="umum">Umum</option>
+                  <option value="naik_pangkat">Naik Pangkat</option>
+                  <option value="naik_gaji">Naik Gaji</option>
+                  <option value="tunjangan_keluarga">Tunjangan Keluarga</option>
+                </select>
+              </div>
 
               <div class="mb-3"><center>
                 <input type="submit" class="btn btn-success btn-md" name="" value="simpan">

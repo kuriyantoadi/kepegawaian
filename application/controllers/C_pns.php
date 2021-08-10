@@ -101,4 +101,14 @@ class C_pns extends CI_Controller {
 		redirect('C_pns');
 	}
 
+	public function naik_pangkat()
+	{
+		$ses_id = $this->session->userdata('ses_id');
+		$data['tampil'] = $this->M_pns->cari_data($ses_id);
+
+		$this->load->view('template/header-pns');
+		$this->load->view('pns/naik_pangkat', $data);
+		$this->load->view('template/footer');
+	}
+
 }

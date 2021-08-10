@@ -8,7 +8,7 @@
           <div class="card-header">
             <h3 style="margin: 30px"><center>Data Permintaan File</h3>
 
-          <a href="<?= base_url() ?>C_operator/permintaan_file_tambah" class="btn btn-primary btn-sm" style="margin-bottom: 20px">Tambah</a>
+          <a href="<?= base_url() ?>C_operator/permintaan_file_tambah" class="btn btn-primary" style="margin-bottom: 20px">Tambah</a>
           <table class="table table-bordered table-hover" id="example">
             <thead>
             <tr>
@@ -17,6 +17,9 @@
               </th>
               <th>
                 <center>Keterangan Permintaan File
+              </th>
+              <th>
+                <center>Kondisi
               </th>
               <th>
                 <center>Opsi
@@ -32,9 +35,10 @@
             <tr>
               <td><center><?= $no++ ?></td>
               <td><center><?= $row->nama_keterangan; ?></td>
+              <td><center><?= $row->kondisi; ?></td>
               <td><center>
-                <a href="<?php echo site_url('c_operator/permintaan_file_hapus/'.$row->id_keterangan); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->nama_keterangan ?> ?')">Hapus</a>
-                <a href="<?php echo site_url('c_operator/permintaan_file_edit/'.$row->id_keterangan); ?>" class="btn btn-sm btn-info">Edit</a>
+                <a href="<?php echo site_url('c_operator/permintaan_file_hapus/'.$row->id_keterangan); ?>" class="btn btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->nama_keterangan ?> ?')">Hapus</a>
+                <a href="<?php echo site_url('c_operator/permintaan_file_edit/'.$row->id_keterangan); ?>" class="btn btn-info">Edit</a>
               </td>
             </tr>
             <?php } ?>
