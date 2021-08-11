@@ -53,13 +53,29 @@ $ses_id = $this->session->userdata('ses_id');
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_operator/permintaan_file">
-							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Permintaan File</span>
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/tampil_pns">
+							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Data PNS</span>
 						</a>
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_operator/tampil_pns">
-							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Data PNS</span>
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/permintaan_file">
+							<i class="align-middle" data-feather="paperclip"></i> <span class="align-middle">Permintaan File</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/validasi_naik_gaji">
+							<i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Validasi Naik Gaji</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/validasi_naik_pangkat">
+							<i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Validasi Naik Pangkat</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_operator/validasi_tunjangan">
+							<i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Validasi Tunjangan</span>
 						</a>
 					</li>
 					<li class="sidebar-item">

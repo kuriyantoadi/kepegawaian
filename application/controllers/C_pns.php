@@ -111,4 +111,6 @@ class C_pns extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+
+
 }

@@ -12,6 +12,7 @@ class C_kasubag extends CI_Controller {
       $this->load->model('M_pengumuman');
       $this->load->model('M_profil');
       $this->load->model('M_kasubag');
+      $this->load->model('M_file');
 
       // session login
       if ($this->session->userdata('kasubag') != true) {
@@ -158,6 +159,45 @@ class C_kasubag extends CI_Controller {
     $this->M_pengumuman->edit_data($data_pengumuman, $kode_pengumuman);
     redirect('C_kasubag/pengumuman');
 
+  }
+
+
+// berkas
+  public function berkas_naik_pangkat()
+  {
+    $data['tampil'] = $this->M_file->berkas_naik_pangkat()->result();
+
+    $this->load->view('template/header-kasubag');
+    $this->load->view('kasubag/v_berkas_naik_pangkat', $data);
+    $this->load->view('template/footer');
+  }
+
+  public function berkas_naik_gaji()
+  {
+    $data['tampil'] = $this->M_file->berkas_naik_gaji()->result();
+
+    $this->load->view('template/header-kasubag');
+    $this->load->view('kasubag/v_berkas_naik_gaji', $data);
+    $this->load->view('template/footer');
+  }
+
+  public function berkas_tunjangan()
+  {
+    $data['tampil'] = $this->M_file->berkas_tunjangan()->result();
+
+    $this->load->view('template/header-kasubag');
+    $this->load->view('kasubag/v_berkas_tunjangan', $data);
+    $this->load->view('template/footer');
+  }
+
+  public function lihat_berkas($id_file)
+  {
+      $kode_file = array('id_file' => $id_file);
+      $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+      $this->load->view('template/header-kasubag');
+      $this->load->view('kasubag/v_berkas_lihat', $data);
+      $this->load->view('template/footer');
   }
 
 }

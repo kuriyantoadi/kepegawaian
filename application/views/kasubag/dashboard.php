@@ -9,7 +9,7 @@
             <h5 class="card-title mb-0">Dashboard</h5>
           </div>
           <div class="card-body px-4">
-            <center><h3>Selamat Datang</h3>
+            <center><h3>Selamat datang di sistem informasi Kepegawaian</h3>
           </div>
         </div>
       </div>

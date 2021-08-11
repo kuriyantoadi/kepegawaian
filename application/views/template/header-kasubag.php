@@ -59,14 +59,25 @@ $ses_id = $this->session->userdata('ses_id');
 					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/lap_berkas">
-							<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Laporan Upload Berkas</span>
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Laporan Upload Berkas</span>
 						</a>
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/belum_upload">
-							<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Belum Upload Berkas</span>
+						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/berkas_naik_gaji">
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Berkas Naik Gaji</span>
 						</a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/berkas_naik_pangkat">
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Berkas Naik Pangkat</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="<?= base_url() ?>C_kasubag/berkas_tunjangan">
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Berkas Tunjangan</span>
+						</a>
+					</li>
+
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_operator/profil_user">
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil User</span>

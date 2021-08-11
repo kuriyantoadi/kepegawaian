@@ -462,4 +462,130 @@ public function profil_pass_up()
   	}
 
 
+//validasi naik gaji
+    public function validasi_naik_gaji()
+    {
+      $data['tampil'] = $this->M_file->validasi_naik_gaji()->result();
+
+      $this->load->view('template/header-op');
+      $this->load->view('operator/v_validasi_naik_gaji', $data);
+      $this->load->view('template/footer');
+    }
+
+    public function validasi_naik_gaji_lihat($id_file)
+    {
+        $kode_file = array('id_file' => $id_file);
+        $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+        $this->load->view('template/header-op');
+        $this->load->view('operator/v_validasi_naik_gaji_lihat', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function validasi_naik_gaji_tolak($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'tolak',
+      );
+
+     $this->M_file->validasi_naik_gaji_tolak($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_naik_gaji');
+    }
+
+    public function validasi_naik_gaji_terima($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'terima',
+      );
+
+     $this->M_file->validasi_naik_gaji_terima($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_naik_gaji');
+    }
+
+//validasi naik pangkat
+    public function validasi_naik_pangkat()
+    {
+      $data['tampil'] = $this->M_file->validasi_naik_pangkat()->result();
+
+      $this->load->view('template/header-op');
+      $this->load->view('operator/v_validasi_naik_pangkat', $data);
+      $this->load->view('template/footer');
+    }
+
+    public function validasi_naik_pangkat_lihat($id_file)
+    {
+        $kode_file = array('id_file' => $id_file);
+        $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+        $this->load->view('template/header-op');
+        $this->load->view('operator/v_validasi_naik_pangkat_lihat', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function validasi_naik_pangkat_tolak($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'tolak',
+      );
+
+     $this->M_file->validasi_naik_gaji_tolak($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_naik_pangkat');
+    }
+
+    public function validasi_naik_pangkat_terima($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'terima',
+      );
+
+     $this->M_file->validasi_naik_gaji_terima($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_naik_pangkat');
+    }
+
+//validasi tunjangan
+    public function validasi_tunjangan()
+    {
+      $data['tampil'] = $this->M_file->validasi_tunjangan()->result();
+
+      $this->load->view('template/header-op');
+      $this->load->view('operator/v_validasi_tunjangan', $data);
+      $this->load->view('template/footer');
+    }
+
+    public function validasi_tunjangan_lihat($id_file)
+    {
+        $kode_file = array('id_file' => $id_file);
+        $data['kode_file'] = $this->M_file->cari_file_view($kode_file);
+
+        $this->load->view('template/header-op');
+        $this->load->view('operator/v_validasi_tunjangan_lihat', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function validasi_tunjangan_tolak($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'tolak',
+      );
+
+     $this->M_file->validasi_tunjangan_tolak($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_tunjangan');
+    }
+
+    public function validasi_tunjangan_terima($id_file)
+    {
+      $kode_file = array('id_file' => $id_file);
+      $validasi_tolak = array(
+        'status_validasi' => 'terima',
+      );
+
+     $this->M_file->validasi_naik_gaji_terima($validasi_tolak, $kode_file);
+     redirect('C_operator/validasi_tunjangan');
+    }
+
 }

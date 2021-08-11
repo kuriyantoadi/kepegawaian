@@ -127,7 +127,108 @@ class M_file extends CI_Model{
       $this->db->where('kondisi','tunjangan_keluarga');
       $tampil = $this->db->get('tb_permintaan_file')->result();
       return $tampil;
-}
+    }
+
+//validasi naik gaji
+    function validasi_naik_gaji(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      // $this->db->where('tb_file.id_pegawai',$ses_id);
+      $this->db->where('tb_permintaan_file.kondisi','naik_gaji');
+      $query = $this->db->get();
+      return $query;
+    }
+
+    function validasi_naik_gaji_tolak($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+    function validasi_naik_gaji_terima($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+//validasi naik pangkat
+    function validasi_naik_pangkat(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      // $this->db->where('tb_file.id_pegawai',$ses_id);
+      $this->db->where('tb_permintaan_file.kondisi','naik_pangkat');
+      $query = $this->db->get();
+      return $query;
+    }
+
+    function validasi_naik_pangkat_tolak($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+    function validasi_naik_pangkat_terima($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+//validasi tunjangan
+    function validasi_tunjangan(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      $this->db->where('tb_permintaan_file.kondisi','tunjangan_keluarga');
+      $query = $this->db->get();
+      return $query;
+    }
+
+    function validasi_tunjangan_tolak($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+    function validasi_tunjangan_terima($validasi_tolak, $kode_file){
+      $this->db->where($kode_file);
+      $this->db->update('tb_file',$validasi_tolak);
+    }
+
+
+//kasubag berkas
+    function berkas_naik_pangkat(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      $this->db->where('tb_permintaan_file.kondisi','naik_pangkat');
+      $this->db->where('tb_file.status_validasi','terima');
+      $query = $this->db->get();
+      return $query;
+    }
+
+    function berkas_naik_gaji(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      $this->db->where('tb_permintaan_file.kondisi','naik_pangkat');
+      $this->db->where('tb_file.status_validasi','terima');
+      $query = $this->db->get();
+      return $query;
+    }
+
+    function berkas_tunjangan(){
+      $this->db->select('*');
+      $this->db->from('tb_file');
+      $this->db->join('tb_pns','tb_pns.id_pegawai = tb_file.id_pegawai');
+      $this->db->join('tb_permintaan_file','tb_permintaan_file.id_keterangan = tb_file.id_keterangan');
+      $this->db->where('tb_permintaan_file.kondisi','tunjangan_keluarga');
+      $this->db->where('tb_file.status_validasi','terima');
+      $query = $this->db->get();
+      return $query;
+    }
+
 
 }
 

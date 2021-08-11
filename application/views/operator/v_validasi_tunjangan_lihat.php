@@ -28,10 +28,10 @@
               </tr>
             </table>
             <center>
-              <a href="<?= site_url('C_file/lihat_berkas/'.$row->id_file); ?>" class='btn btn-info'>Lolos Seleksi</a>
-              <a href="<?= site_url('C_file/lihat_berkas/'.$row->id_file); ?>" class='btn btn-info'>Tidak Lolos Seleksi</a>
-            <?php } ?>
+             <a href="<?= site_url('C_operator/validasi_tunjangan_tolak/'.$row->id_file); ?>" class='btn btn-danger'>Tolak</a>
+             <a href="<?= site_url('C_operator/validasi_tunjangan_terima/'.$row->id_file); ?>" class='btn btn-info'>Terima</a>
 
+            <?php } ?>
 
           </div>
         </div>

@@ -37,8 +37,8 @@
               <td><center><?= $row->nama_keterangan; ?></td>
               <td><center><?= $row->kondisi; ?></td>
               <td><center>
-                <a href="<?php echo site_url('c_operator/permintaan_file_hapus/'.$row->id_keterangan); ?>" class="btn btn-danger" onclick="return confirm('Anda yakin menhapus data <?= $row->nama_keterangan ?> ?')">Hapus</a>
-                <a href="<?php echo site_url('c_operator/permintaan_file_edit/'.$row->id_keterangan); ?>" class="btn btn-info">Edit</a>
+                <a href="<?php echo site_url('c_operator/permintaan_file_hapus/'.$row->id_keterangan); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin menhapus data <?= $row->nama_keterangan ?> ?')">Hapus</a>
+                <a href="<?php echo site_url('c_operator/permintaan_file_edit/'.$row->id_keterangan); ?>" class="btn btn-info btn-sm">Edit</a>
               </td>
             </tr>
             <?php } ?>

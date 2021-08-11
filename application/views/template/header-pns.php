@@ -59,17 +59,17 @@ $ses_id = $this->session->userdata('ses_id');
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_file/naik_pangkat">
-							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Naik Pangkat</span>
+							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Naik Pangkat</span>
 						</a>
 					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_file/naik_gaji">
-							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Naik Gaji</span>
+							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Naik Gaji</span>
 						</a>
 					</li>
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="<?= base_url() ?>C_file/tunjangan">
-							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Tunjangan</span>
+							<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Tunjangan</span>
 						</a>
 					</li>
 					<li class="sidebar-item">

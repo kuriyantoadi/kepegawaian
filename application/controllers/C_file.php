@@ -233,7 +233,7 @@ class C_file extends CI_Controller {
 
 
         print_r ($error);
-        redirect('C_file/naik_pangkat');
+        redirect('C_file/naik_gaji');
 
       }else {
         $_data = array('upload_data' => $this->upload->data());
@@ -249,7 +249,7 @@ class C_file extends CI_Controller {
 
         if ($query) {
           echo 'berhasil diupload';
-          redirect('C_file/naik_pangkat');
+          redirect('C_file/naik_gaji');
         }else {
           echo 'gagal upload';
         }
@@ -338,5 +338,8 @@ class C_file extends CI_Controller {
       }
       redirect('C_file/v_tunjangan');
     }
+
+
+
 
 }
